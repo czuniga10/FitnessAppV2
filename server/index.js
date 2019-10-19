@@ -1,8 +1,11 @@
 const express = require('express');
 
-const app = express();
+const addMiddleware = require('./middleware/decorate.middleware');
 
-const port = 8080;
+const app = express();
+addMiddleware(app);
+
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
-    console.log("server listing...");
+    console.log(`===================================\n Server is listening on port ${port}. \n===================================`);
 })
