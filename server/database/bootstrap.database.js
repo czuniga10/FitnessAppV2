@@ -1,4 +1,4 @@
-import massive from 'massive';
+const massive = require('massive');
 const connectionString = require('./keys.database');
 
 let db;
