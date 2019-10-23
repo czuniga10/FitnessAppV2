@@ -33,14 +33,15 @@ CREATE TABLE users (
     workoutID INT REFERENCES workout(id),
     sets TEXT,
     reps TEXT,
-    isComplete BOOLEAN
+    isComplete BOOLEAN DEFAULT false
  );
 
  --   TEST DATA 
 
 INSERT INTO users ( first_name, last_name, email, password )
 VALUES
-    ('TEST', 'ME', 'test@test.com', 'pword1')
+    ('TEST', 'ME', 'test@test.com', 'pword1'),
+    ('USER', 'TEST', 'no@email.com', 'pword2')
 ;
 
 INSERT INTO workout ( name )
@@ -52,4 +53,21 @@ VALUES
     ('Pull Ups'),
     ('Sit Ups'),
     ('Cable Curls')
+;
+
+INSERT INTO program ( userID, name )
+VALUES
+    (1, 'Heavy Day'),
+    (1, 'Light Day'),
+    (2, 'Monday'),
+    (2, 'Wednesday'),
+    (2, 'Friday')
+;
+
+INSERT INTO program_workouts ( programID, workoutID, sets, reps )
+VALUES
+    (1, 1, '3', '10'),
+    (1, 2, '3', '12'),
+    (2, 3, '5', '6'),
+    (2, 4, '5', '6')
 ;
