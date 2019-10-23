@@ -42,3 +42,14 @@ INSERT INTO users ( first_name, last_name, email, password )
 VALUES
     ('TEST', 'ME', 'test@test.com', 'pword1')
 ;
+
+INSERT INTO workout ( name )
+VALUES
+    ('Bench Press'),
+    ('Dumbell Curls'),
+    ('Tricep Extensions'),
+    ('Back Squats'),
+    ('Pull Ups'),
+    ('Sit Ups'),
+    ('Cable Curls')
+;
