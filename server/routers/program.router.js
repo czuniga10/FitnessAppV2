@@ -4,7 +4,7 @@ const getDb = require('../database/bootstrap.database');
 const programRouter = express.Router();
 
 // test worked
-programRouter.get('/programs/:userID', (req, res) => {
+programRouter.get('/:userID', (req, res) => {
     const id = req.params.userID;
     const db = getDb();
     db.READ.getPrograms( [id] )
