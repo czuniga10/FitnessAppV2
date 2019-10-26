@@ -1,8 +1,19 @@
 import axios from 'axios';
 
-const baseURL = 'api/program';
+const baseURL = 'api/workouts';
 
-const getUserPrograms = async (id) => {
+const getAllWorkouts = async () => {
+    try {
+        const res = await axios
+            .get(`${baseURL}/`);
+        return res;
+    }
+    catch (err) {
+        throw err;
+    }
+}
+
+const getWorkoutByID = async (id) => {
     try {
         const res = await axios
             .get(`${baseURL}/${id}`);
@@ -13,10 +24,10 @@ const getUserPrograms = async (id) => {
     }
 }
 
-const getUserWorkouts = async (id) => {
+const createWorkout = async () => {
     try {
         const res = await axios
-            .get(`${baseURL}/program-workouts/${id}`);
+            .post(`${baseURL}/create`);
         return res;
     }
     catch (err) {
@@ -24,19 +35,10 @@ const getUserWorkouts = async (id) => {
     }
 }
 
-const createProgram = async () => {
-    try {
-        const res = await axios
-            .get(`${baseURL}/create`);
-        return res;
-    }
-    catch (err) {
-        throw err;
-    }
-}
+
 
 export {
-    getUserPrograms,
-    getUserWorkouts,
-    createProgram
+    getAllWorkouts,
+    getWorkoutByID,
+    createWorkout
 }
