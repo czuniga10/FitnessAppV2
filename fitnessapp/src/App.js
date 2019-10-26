@@ -12,6 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
+      loading: false
     }
   }
 
@@ -20,7 +21,8 @@ class App extends Component {
       .then( res => {
         console.log(res.data[0]);
         let newUserInfo = res.data[0];
-        this.props.updateUser(newUserInfo)
+        this.props.updateUser(newUserInfo);
+        this.setState({loading: true});
         ;
       })
   }
