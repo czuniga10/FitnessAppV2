@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state={
-      loading: false
+      // loading: false
     }
   }
 
@@ -22,15 +22,15 @@ class App extends Component {
         console.log(res.data[0]);
         let newUserInfo = res.data[0];
         this.props.updateUser(newUserInfo);
-        this.setState({loading: true});
+        // this.setState({loading: true});
         ;
       })
   }
 
     render() {
-      const {loading} = this.state;
+      // const {loading} = this.state;
       return (
-        !loading && 
+        // !loading && 
         <div className="App">
           <Route exact path='/' />
         </div>
