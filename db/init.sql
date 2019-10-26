@@ -41,7 +41,9 @@ CREATE TABLE users (
 INSERT INTO users ( first_name, last_name, email, password )
 VALUES
     ('TEST', 'ME', 'test@test.com', 'pword1'),
-    ('USER', 'TEST', 'no@email.com', 'pword2')
+    ('USER', 'TEST', 'no@email.com', 'pword2'),
+    ('New', 'USER', 'nope@email.com', 'pword3'),
+    ('Testy', 'McTesterson', 'testy@email.com', 'pword4')
 ;
 
 INSERT INTO workout ( name )
@@ -52,7 +54,10 @@ VALUES
     ('Back Squats'),
     ('Pull Ups'),
     ('Sit Ups'),
-    ('Cable Curls')
+    ('Cable Curls'),
+    ('Clean and Jerk'),
+    ('Shoulder Press'),
+    ('Cardio')
 ;
 
 INSERT INTO program ( userID, name )
