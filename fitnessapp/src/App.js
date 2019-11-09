@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import { getUserByID } from './Services/user.service';
-import { updateUser } from './Services/Actions/actionCreators';
+import { updateUser } from './Actions/actionCreators';
+
+import Programs from './Components/Program/program';
 
 
 //temporary, used for testing, when user logs in, user info will be provided by user/authO
@@ -32,7 +34,8 @@ class App extends Component {
       return (
         // !loading && 
         <div className="App">
-          <Route exact path='/' />
+          {/* <Route exact path='/' /> */}
+          <Programs />
         </div>
       );
     }
