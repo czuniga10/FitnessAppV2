@@ -7,6 +7,8 @@ import { getUserByID } from './Services/user.service';
 import { updateUser } from './Actions/actionCreators';
 
 import Programs from './Components/Program/program';
+import Header from './Components/Header/header';
+
 
 
 //temporary, used for testing, when user logs in, user info will be provided by user/authO
@@ -34,8 +36,9 @@ class App extends Component {
       return (
         // !loading && 
         <div className="App">
+          <Header/>
           {/* <Route exact path='/' /> */}
-          <Programs />
+          {/* <Programs /> */}
         </div>
       );
     }

@@ -1,0 +1,23 @@
+.header-wrapper {
+    height: 80px;
+    background-color: #55ACEE;
+    display: flex;
+    border-bottom: 1.5px solid #CCD6DD;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    border-right: 1.5px solid #CCD6DD;
+}
+
+.image {
+    margin: auto;
+    padding: 2px 8px 0 8px;
+    height: 70px;
+    width: 70px;
+}
+
+button {
+    font-size: 20px;
+}

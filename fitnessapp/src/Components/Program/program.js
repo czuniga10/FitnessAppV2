@@ -5,6 +5,7 @@ class Programs extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            programs: []
         }
     }
 
