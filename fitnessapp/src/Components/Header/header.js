@@ -20,9 +20,13 @@ class Header extends Component {
             <div className="title">
                 <img className="image" src={logo} />
             </div>
-            <div className="button-wrapper">
-                <button >HOME</button>
-            </div>
+            <button>
+                <div className="menu-wrapper">
+                    <span>___<br/></span>
+                    <span>___<br/></span>
+                    <span>___<br/></span>
+                </div>
+            </button>
         </div>
     )}
 }

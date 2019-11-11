@@ -18,7 +18,33 @@
     width: 70px;
 }
 
-button {
+.menu-wrapper {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 34px;
+    padding-right: 9px;
+    font-weight: bold;
     font-size: 20px;
-    font-weight: 700;
+}
+
+.menu-wrapper:hover {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 48px;
+    padding-right: 7px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+span {
+    height: 3px;
+}
+
+button {
+    background-color: #55ACEE;
+    border: 0px;
 }
