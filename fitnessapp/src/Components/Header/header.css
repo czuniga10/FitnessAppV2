@@ -30,14 +30,15 @@
 }
 
 .menu-wrapper:hover {
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     padding-bottom: 48px;
     padding-right: 7px;
     font-weight: bold;
     font-size: 25px;
+}
+
+button:focus {
+    outline: none;
+    border: none;
 }
 
 span {
