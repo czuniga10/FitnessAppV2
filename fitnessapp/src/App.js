@@ -37,7 +37,7 @@ class App extends Component {
         // !loading && 
         <div className="App">
           <Header/>
-          {/* <Route exact path='/' /> */}
+          <Programs/>
           {/* <Programs /> */}
         </div>
       );
