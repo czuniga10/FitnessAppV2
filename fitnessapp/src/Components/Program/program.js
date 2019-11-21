@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { getUserPrograms } from '../../Services/program.service';
 
+import ProgramItem from './ProgramItem';
+
 class Programs extends Component {
     constructor(props) {
         super(props)
@@ -21,8 +23,19 @@ class Programs extends Component {
     }
     render() {
         console.log(this.state.programs)
+        const programs = this.state.programs;
+        const displayProgramItems = programs.map(program => {
+            const index = programs.indexOf(program);
+            return (<ProgramItem 
+                key={index}
+                index={index}
+                id={program.id}
+                name={program.name}
+            />)
+        })
     return(
         <div className="program-wrapper">
+            {displayProgramItems}
         </div>
     )}
 }

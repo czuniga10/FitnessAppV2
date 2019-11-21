@@ -6,7 +6,7 @@ import './App.css';
 import { getUserByID } from './Services/user.service';
 import { updateUser } from './Actions/actionCreators';
 
-import Programs from './Components/Program/program';
+import Programs from './Components/Program/Program';
 import Header from './Components/Header/header';
 
 
