@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class ProgramItem extends Component {
     render() {
-        let test = Math.floor(Math.random()*8) +1
+        let test = Math.floor(Math.random()*2) +1
         const {id, name } = this.props;
     return(
         <div className="program-wrapper">
