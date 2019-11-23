@@ -1,0 +1,20 @@
+.program-wrapper {
+    padding-top: 50px;
+}
+
+.program-card-wrapper {
+    width: 30%;
+    margin: auto;
+    display: grid;
+    grid-row-gap: 50px;
+}
+
+.card-wrapper {
+    height: 150px;
+    background-color: #CCD6DD;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+};

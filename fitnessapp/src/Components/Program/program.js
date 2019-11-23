@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getUserPrograms } from '../../Services/program.service';
 
 import ProgramItem from './ProgramItem';
+import './Program.css';
 
 class Programs extends Component {
     constructor(props) {
@@ -35,7 +36,9 @@ class Programs extends Component {
         })
     return(
         <div className="program-wrapper">
-            {displayProgramItems}
+            <div className="program-card-wrapper">
+                {displayProgramItems}
+            </div>
         </div>
     )}
 }
