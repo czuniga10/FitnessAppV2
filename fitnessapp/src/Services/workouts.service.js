@@ -2,10 +2,10 @@ import axios from 'axios';
 
 const baseURL = 'api/workouts';
 
-const getAllWorkouts = async () => {
+const getAllWorkouts = async (projectId) => {
     try {
         const res = await axios
-            .get(`${baseURL}/`);
+            .get(`${baseURL}/${projectId}`);
         return res;
     }
     catch (err) {
