@@ -69,10 +69,10 @@ VALUES
     (2, 'Friday')
 ;
 
-INSERT INTO program_workouts ( programID, workoutID, sets, reps )
+INSERT INTO program_workouts ( programID, workoutID, sets, reps, isComplete )
 VALUES
-    (1, 1, '3', '10'),
-    (1, 2, '3', '12'),
-    (2, 3, '5', '6'),
-    (2, 4, '5', '6')
+    (1, 1, '3', '10',''),
+    (1, 2, '3', '12',''),
+    (2, 3, '5', '6',''),
+    (2, 4, '5', '6','')
 ;

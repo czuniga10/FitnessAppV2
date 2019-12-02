@@ -6,10 +6,9 @@ import './App.css';
 import { getUserByID } from './Services/user.service';
 import { updateUser } from './Actions/actionCreators';
 
-import Programs from './Components/Program/Program';
+// import Programs from './Components/Program/Program';
 import Header from './Components/Header/header';
-
-
+import Workouts from './Components/Workouts/Workouts';
 
 //temporary, used for testing, when user logs in, user info will be provided by user/authO
 class App extends Component {
@@ -37,8 +36,8 @@ class App extends Component {
         // !loading && 
         <div className="App">
           <Header/>
-          <Programs/>
-          {/* <Programs /> */}
+          {/* <Programs/> */}
+          <Workouts />
         </div>
       );
     }

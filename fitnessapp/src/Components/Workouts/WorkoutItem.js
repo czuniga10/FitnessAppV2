@@ -6,6 +6,9 @@ class WorkoutItem extends Component {
     return(
         <div className="card-wrapper">
             {name}
+            {sets}
+            {reps}
+            {isComplete}
         </div>
     )}
 }

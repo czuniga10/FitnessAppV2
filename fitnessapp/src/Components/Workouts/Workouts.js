@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getUserWorkouts } from '../../Services/program.service';
 
 import WorkoutItem from './WorkoutItem';
-import './Workout.css';
+import './Workouts.css';
 
 class Workouts extends Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class Workouts extends Component {
 
     componentDidMount(){
         let id = 1;
-        getUserworkouts(id)
+        getUserWorkouts(id)
             .then(res => {
                 this.setState({
                     workouts: res.data
