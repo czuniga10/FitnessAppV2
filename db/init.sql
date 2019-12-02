@@ -33,7 +33,7 @@ CREATE TABLE users (
     workoutID INT REFERENCES workout(id),
     sets TEXT,
     reps TEXT,
-    isComplete BOOLEAN DEFAULT false
+    isComplete TEXT DEFAULT 'f'
  );
 
  --   TEST DATA 
@@ -69,10 +69,10 @@ VALUES
     (2, 'Friday')
 ;
 
-INSERT INTO program_workouts ( programID, workoutID, sets, reps, isComplete )
+INSERT INTO program_workouts ( programID, workoutID, sets, reps )
 VALUES
-    (1, 1, '3', '10',''),
-    (1, 2, '3', '12',''),
-    (2, 3, '5', '6',''),
-    (2, 4, '5', '6','')
+    (1, 1, '3', '10'),
+    (1, 2, '3', '12'),
+    (2, 3, '5', '6'),
+    (2, 4, '5', '6')
 ;
