@@ -33,7 +33,7 @@ CREATE TABLE users (
     workoutID INT REFERENCES workout(id),
     sets TEXT,
     reps TEXT,
-    isComplete TEXT DEFAULT 'f'
+    iscomplete TEXT default 'f'
  );
 
  --   TEST DATA 

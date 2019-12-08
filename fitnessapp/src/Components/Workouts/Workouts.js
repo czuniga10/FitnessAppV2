@@ -34,7 +34,7 @@ class Workouts extends Component {
                 name={workout.name}
                 sets={workout.sets}
                 reps={workout.reps}
-                isComplete={workout.isComplete}
+                iscomplete={workout.iscomplete}
             />)
         })
     return(
