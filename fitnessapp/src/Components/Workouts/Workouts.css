@@ -1,0 +1,20 @@
+.workout-card-wrapper {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;    
+    margin-top: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.card-wrapper {
+    display: grid;
+    padding-top: 10px;
+}
+
+
+.item {
+    grid-row: 1 ;
+}

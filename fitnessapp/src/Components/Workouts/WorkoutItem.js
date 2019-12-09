@@ -6,10 +6,10 @@ class WorkoutItem extends Component {
         const {id, name, sets, reps, iscomplete } = this.props;
     return(
         <div className="card-wrapper">
-            {name}
-            {sets}
-            {reps}         
-            {iscomplete}
+           <div className="item"> {name}</div> 
+           <div className="item"> {sets}</div>
+           <div className="item"> {reps}</div>         
+           <div className="item"> {iscomplete}</div>
         </div>
     )}
 }
