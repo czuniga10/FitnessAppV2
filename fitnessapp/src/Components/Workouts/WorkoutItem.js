@@ -6,10 +6,10 @@ class WorkoutItem extends Component {
         const {id, name, sets, reps, iscomplete } = this.props;
     return(
         <div className="card-wrapper">
-           <div className="item"> {name}</div> 
-           <div className="item"> {sets}</div>
-           <div className="item"> {reps}</div>         
-           <div className="item"> {iscomplete}</div>
+           <div className="item name"> {name}</div> 
+           <div className="item sets"> {sets}</div>
+           <div className="item reps"> {reps}</div>         
+           <input className="complete" type="checkbox" />
         </div>
     )}
 }
