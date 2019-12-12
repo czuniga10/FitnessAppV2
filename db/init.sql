@@ -29,6 +29,7 @@ CREATE TABLE users (
  );
 
  CREATE TABLE program_workouts (
+    id SERIAL PRIMARY KEY,
     programID INT REFERENCES program(id),
     workoutID INT REFERENCES workout(id),
     sets TEXT,
@@ -74,5 +75,5 @@ VALUES
     (1, 1, '3', '10'),
     (1, 2, '3', '12'),
     (2, 3, '5', '6'),
-    (2, 4, '5', '6')
+    (2, 5, '5', '6')
 ;

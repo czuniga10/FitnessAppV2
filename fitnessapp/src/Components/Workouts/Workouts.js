@@ -14,7 +14,7 @@ class Workouts extends Component {
     }
 
     componentDidMount(){
-        let id = 1;
+        let id = 2;
         getUserWorkouts(id)
             .then(res => {
                 this.setState({
@@ -22,6 +22,7 @@ class Workouts extends Component {
                 })
             })
     }
+    
     render() {
         console.log(this.state.workouts)
         const workouts = this.state.workouts;
