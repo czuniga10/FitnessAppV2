@@ -38,7 +38,7 @@ const createProgram = async () => {
 const updateChecked = async () => {
     try {
         const res = await axios
-            .post(`${baseURL}/`);
+            .post(`${baseURL}/update-check`, body);
         return res;
     }
     catch (err) {
@@ -49,5 +49,6 @@ const updateChecked = async () => {
 export {
     getUserPrograms,
     getUserWorkouts,
-    createProgram
+    createProgram,
+    updateChecked
 }

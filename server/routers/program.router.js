@@ -30,9 +30,9 @@ programRouter.post('/create', (req, res) => {
 });
 
 programRouter.patch('/update-check', (req, res) => {
-    const {} = req.body;
+    const {id, iscomplete} = req.body;
     const db = getDb();
-    db.READ.createProgramWorkouts( [workoutID, sets, reps] )
+    db.READ.createProgramWorkouts( [iscomplete] )
         .then( promise => res.status(200).send(promise))
         .catch( err => res.status(500).send(err))
 });

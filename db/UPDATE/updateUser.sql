@@ -6,4 +6,4 @@ SET
     password = $5
 WHERE
     id = $1
-;
+; 
