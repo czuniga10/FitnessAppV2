@@ -3,6 +3,8 @@ export const GET_WORKOUT = "GET_WORKOUT";
 export const ADD_PROGRAM = "GET_PROGRAM";
 export const ADD_WORKOUT = "GET_WORKOUT";
 export const UPDATE_USER = "UPDATE_USER";
+export const UPDATE_CHECKED = "UPDATE_CHECKED";
+
 
 export const getProgram = (user) => {
     return{
@@ -36,5 +38,12 @@ export const updateUser = (user) => {
     return{
         type: UPDATE_USER,
         payload: user
+    }
+}
+
+export const updateChecked = (program_workout) => {
+    return{
+        type: UPDATE_CHECKED,
+        payload: program_workout
     }
 }

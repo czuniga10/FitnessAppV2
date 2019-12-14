@@ -27,15 +27,13 @@ const getWorkoutByID = async (id) => {
 const createWorkout = async () => {
     try {
         const res = await axios
-            .post(`${baseURL}/create`);
+            .patch(`${baseURL}/update-check`);
         return res;
     }
     catch (err) {
         throw err;
     }
 }
-
-
 
 export {
     getAllWorkouts,

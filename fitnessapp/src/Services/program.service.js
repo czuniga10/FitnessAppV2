@@ -35,6 +35,17 @@ const createProgram = async () => {
     }
 }
 
+const updateChecked = async () => {
+    try {
+        const res = await axios
+            .post(`${baseURL}/`);
+        return res;
+    }
+    catch (err) {
+        throw err;
+    }
+}
+
 export {
     getUserPrograms,
     getUserWorkouts,

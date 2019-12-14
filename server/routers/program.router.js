@@ -24,7 +24,15 @@ programRouter.get('/program-workouts/:programID', (req, res) => {
 programRouter.post('/create', (req, res) => {
     const {workoutID, sets, reps} = req.body;
     const db = getDb();
-    db.READ.getProgramWorkouts( [workoutID, sets, reps] )
+    db.READ.createProgramWorkouts( [workoutID, sets, reps] )
+        .then( promise => res.status(200).send(promise))
+        .catch( err => res.status(500).send(err))
+});
+
+programRouter.patch('/update-check', (req, res) => {
+    const {} = req.body;
+    const db = getDb();
+    db.READ.createProgramWorkouts( [workoutID, sets, reps] )
         .then( promise => res.status(200).send(promise))
         .catch( err => res.status(500).send(err))
 });
