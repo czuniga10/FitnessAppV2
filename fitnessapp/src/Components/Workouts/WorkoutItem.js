@@ -31,6 +31,12 @@ class WorkoutItem extends Component {
     render() {
         console.log(this.state)
         const {id, index, name, sets, reps, iscomplete } = this.props;
+        var check;
+        if(iscomplete) {
+            check = 'checked'
+        }else{
+            check = 'unchecked'
+        }
     return(
         <div className="card-wrapper">
             <div className="item name"> {id}</div> 
