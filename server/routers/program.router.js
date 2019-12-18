@@ -32,7 +32,7 @@ programRouter.post('/create', (req, res) => {
 programRouter.patch('/update-check', (req, res) => {
     const {id, iscomplete} = req.body;
     const db = getDb();
-    db.READ.createProgramWorkouts( [iscomplete] )
+    db.UPDATE.updateChecked( [id, iscomplete] )
         .then( promise => res.status(200).send(promise))
         .catch( err => res.status(500).send(err))
 });

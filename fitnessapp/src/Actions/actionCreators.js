@@ -41,7 +41,7 @@ export const updateUser = (user) => {
     }
 }
 
-export const updateChecked = (program_workout) => {
+export const updateCheckedRedux = (program_workout) => {
     return{
         type: UPDATE_CHECKED,
         payload: program_workout

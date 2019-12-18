@@ -4,3 +4,5 @@ SET
 WHERE
     id = $1
 ;
+
+SELECT id,iscomplete from program_workouts where id = $1;

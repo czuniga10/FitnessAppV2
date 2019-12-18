@@ -14,7 +14,7 @@ class Workouts extends Component {
     }
 
     componentDidMount(){
-        let id = 2;
+        let id = 1;
         getUserWorkouts(id)
             .then(res => {
                 this.setState({
@@ -24,7 +24,6 @@ class Workouts extends Component {
     }
     
     render() {
-        console.log(this.state.workouts)
         const workouts = this.state.workouts;
         const displayWorkoutItems = workouts.map(workout => {
             const index = workouts.indexOf(workout);

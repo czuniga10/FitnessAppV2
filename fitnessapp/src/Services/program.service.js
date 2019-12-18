@@ -35,10 +35,10 @@ const createProgram = async () => {
     }
 }
 
-const updateChecked = async () => {
+const updateChecked = async (body) => {
     try {
         const res = await axios
-            .post(`${baseURL}/update-check`, body);
+            .patch(`${baseURL}/update-check`, body);
         return res;
     }
     catch (err) {

@@ -34,7 +34,7 @@ CREATE TABLE users (
     workoutID INT REFERENCES workout(id),
     sets TEXT,
     reps TEXT,
-    iscomplete TEXT default 'f'
+    iscomplete BOOLEAN default FALSE
  );
 
  --   TEST DATA 

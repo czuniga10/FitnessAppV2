@@ -1,24 +1,36 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import { updateCheckedRedux } from '../../Actions/actionCreators';
+import {updateChecked} from '../../Services/program.service';
 
 class WorkoutItem extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isChecked: false
+            isChecked: ''
         }
         this.handleChecked = this.handleChecked.bind(this);
     }
 
     handleChecked(id) {      
-        this.setState({
-            isChecked: !this.state.isChecked
-        })
+        let body = {
+            id,
+            iscomplete: !this.state.isChecked
+        }
+        updateChecked(body) 
+            .then(res => {
+                this.setState({
+                    isChecked: res.data[0].iscomplete
+                })
+               this.props.updateCheckedRedux(res.data[0].iscomplete)
+            })
 
     }
 
     render() {
+        console.log(this.state)
         const {id, index, name, sets, reps, iscomplete } = this.props;
-        console.log(this.state.isChecked + " " + id)
     return(
         <div className="card-wrapper">
             <div className="item name"> {id}</div> 
@@ -29,5 +41,9 @@ class WorkoutItem extends Component {
         </div>
     )}
 }
+
+function mapStateToProps(state){
+    return state;
+}
   
-export default WorkoutItem;
+export default connect( mapStateToProps, {updateCheckedRedux} ) (WorkoutItem);

@@ -2,8 +2,6 @@ import {createStore,combineReducers} from 'redux';
 import userInfo from './Reducers/user.reducer';
 import updateChecked from './Reducers/checked.reducer';
 
-
-
 let rootReducer = combineReducers({
     userInfo,
     updateChecked
