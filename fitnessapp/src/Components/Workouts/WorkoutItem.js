@@ -8,7 +8,8 @@ class WorkoutItem extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isChecked: ''
+            isChecked: '',
+            isStrikeThrough: false
         }
         this.handleChecked = this.handleChecked.bind(this);
     }
@@ -21,26 +22,21 @@ class WorkoutItem extends Component {
         updateChecked(body) 
             .then(res => {
                 this.setState({
-                    isChecked: res.data[0].iscomplete
+                    isChecked: res.data[0].iscomplete,
+                    isStrikeThrough: !this.state.isStrikeThrough
                 })
                this.props.updateCheckedRedux(res.data[0].iscomplete)
             })
-
     }
 
     render() {
         console.log(this.state)
         const {id, index, name, sets, reps, iscomplete } = this.props;
-        var check;
-        if(iscomplete) {
-            check = 'checked'
-        }else{
-            check = 'unchecked'
-        }
+
     return(
         <div className="item-wrapper">
-            <div className="item name"> {id}</div> 
-           <div className="item name"> {name}</div> 
+            {/* <div className="item name"> {id}</div>  */}
+           <div className="item name" > {name}</div> 
            <div className="item sets"> {sets}</div>
            <div className="item reps"> {reps}</div>         
            <input className="complete" type="checkbox" onChange={() => {this.handleChecked(id)}}/>
