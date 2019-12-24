@@ -38,7 +38,7 @@ class WorkoutItem extends Component {
             check = 'unchecked'
         }
     return(
-        <div className="card-wrapper">
+        <div className="item-wrapper">
             <div className="item name"> {id}</div> 
            <div className="item name"> {name}</div> 
            <div className="item sets"> {sets}</div>

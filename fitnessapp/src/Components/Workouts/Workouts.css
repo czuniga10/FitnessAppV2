@@ -9,11 +9,10 @@
     color: white;
 }
 
-.card-wrapper {
+.item-wrapper {
     display: grid;
     padding-top: 10px;
 }
-
 
 .item {
     grid-row: 1 ;

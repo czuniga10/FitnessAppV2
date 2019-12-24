@@ -36,8 +36,8 @@ class App extends Component {
         // !loading && 
         <div className="App">
           <Header/>
-          <Programs/>
-          {/* <Workouts /> */}
+          {/* <Programs/> */}
+          <Workouts />
         </div>
       );
     }
