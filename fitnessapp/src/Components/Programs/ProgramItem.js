@@ -5,7 +5,16 @@ class ProgramItem extends Component {
         const {id, name } = this.props;
     return(
         <div className="card-wrapper">
-            {name}
+            <div className="card-wrapper-inner">
+                <div className="card-wrapper-front">
+                    <div className="card-text">{name}</div>
+                </div>
+                <div className="card-wrapper-back">
+                    TEST TEST <br/>
+                    TEST <br/>
+                    TEST
+                </div>
+            </div>
         </div>
     )}
 }

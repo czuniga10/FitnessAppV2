@@ -6,7 +6,7 @@ import './App.css';
 import { getUserByID } from './Services/user.service';
 import { updateUser } from './Actions/actionCreators';
 
-// import Programs from './Components/Program/Program';
+import Programs from './Components/Programs/Program';
 import Header from './Components/Header/header';
 import Workouts from './Components/Workouts/Workouts';
 
@@ -36,8 +36,8 @@ class App extends Component {
         // !loading && 
         <div className="App">
           <Header/>
-          {/* <Programs/> */}
-          <Workouts />
+          <Programs/>
+          {/* <Workouts /> */}
         </div>
       );
     }
