@@ -32,6 +32,7 @@ class WorkoutItem extends Component {
     render() {
         let style = {
             textDecoration: this.state.done ? "red line-through" : "none",
+            backgroundColor: this.state.done ? "#E1E8ED" : ""
           };
         console.log(this.state)
         const {id, index, name, sets, reps, iscomplete } = this.props;

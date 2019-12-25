@@ -1,9 +1,8 @@
 .workout-card-wrapper {
     display: flex;
-    width: 60%;
+    width: 50%;
     margin: auto;
     flex-direction: column;
-    justify-content: space-between;    
     margin-top: 50px;
     font-size: 30px;
     color: white;
