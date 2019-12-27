@@ -19,14 +19,12 @@
 }
 
 .menu-wrapper {
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 34px;
-    padding-right: 9px;
-    font-weight: bold;
-    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    transition: all .4s ease;
+    padding-right: 10px;
 }
 
 button:focus {
@@ -34,9 +32,14 @@ button:focus {
     border: none;
 }
 
-span {
-    height: 3px;
-}
+.bar {
+    display: block;
+    height: 4px;
+    width: 40px;
+    background: black;
+    margin: 7px auto;
+    transition: all .4s ease;
+  }
 
 button {
     background-color: #55ACEE;

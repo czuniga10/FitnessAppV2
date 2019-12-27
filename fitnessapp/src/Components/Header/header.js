@@ -22,9 +22,9 @@ class Header extends Component {
             </div>
             <button>
                 <div className="menu-wrapper">
-                    <span>___<br/></span>
-                    <span>___<br/></span>
-                    <span>___<br/></span>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
                 </div>
             </button>
         </div>
