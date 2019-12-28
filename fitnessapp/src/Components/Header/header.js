@@ -14,6 +14,7 @@ class Header extends Component {
     componentDidMount(){
         
     }
+
     render() {
     return(
         <div className="header-wrapper">
@@ -22,9 +23,9 @@ class Header extends Component {
             </div>
             <button>
                 <div className="menu-wrapper">
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
+                    <div className="bar top"></div>
+                    <div className="bar middle"></div>
+                    <div className="bar bottom"></div>
                 </div>
             </button>
         </div>
