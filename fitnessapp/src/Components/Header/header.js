@@ -8,16 +8,19 @@ class Header extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            menuActive: false
         }
     }
 
-    componentDidMount(){
-        
+    handleMenu() {
+        this.setState({
+            menuActive: !menuActive
+        })
     }
 
     render() {
     return(
-        <div className="header-wrapper">
+        <div className="header-wrapper" onClick={() => this.handleMenu()}>
             <div className="title">
                 <img className="image" src={logo} />
             </div>
