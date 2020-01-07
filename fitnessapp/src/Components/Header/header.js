@@ -22,6 +22,11 @@ class Header extends Component {
     render() {
         const isMenuActive = this.state.menuActive;
     return(
+        //TODO
+        // - Create new header div
+        // - add new section to header for drop down menu
+        // - add isMenuActive state to the class of the new drop down menu so it only appears when true
+        // - Grey out rest of page when it is active
         <div className="header-wrapper">
             <div className="title">
                 <img className="image" src={logo} />
