@@ -10,25 +10,28 @@ class Header extends Component {
         this.state = {
             menuActive: false
         }
+        this.handleMenu = this.handleMenu.bind(this);
     }
 
     handleMenu() {
         this.setState({
-            menuActive: !menuActive
+            menuActive: !this.state.menuActive
         })
     }
 
     render() {
+        const isMenuActive = this.state.menuActive;
+        console.log(isMenuActive);
     return(
-        <div className="header-wrapper" onClick={() => this.handleMenu()}>
+        <div className="header-wrapper">
             <div className="title">
                 <img className="image" src={logo} />
             </div>
             <button>
-                <div className="menu-wrapper">
-                    <div className="bar top"></div>
-                    <div className="bar middle"></div>
-                    <div className="bar bottom"></div>
+                <div className="menu-wrapper" onClick={() => {this.handleMenu()}}>
+                    <div className={`bar top ${isMenuActive ? "topOpen" : ""}`}></div>
+                    <div className={`bar middle ${isMenuActive ? "middleOpen" : ""}`}></div>
+                    <div className={`bar bottom ${isMenuActive ? "bottomOpen" : ""}`}></div>
                 </div>
             </button>
         </div>

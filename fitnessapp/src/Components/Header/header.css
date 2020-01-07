@@ -45,3 +45,15 @@ button {
     background-color: #55ACEE;
     border: 0px;
 }
+
+.topOpen {
+    transform: translateY(11px) rotateZ(47deg);
+  }
+ 
+.middleOpen {
+    width: 0;
+}
+  
+.bottomOpen {
+    transform: translateY(-11px) rotateZ(-48deg);
+}
