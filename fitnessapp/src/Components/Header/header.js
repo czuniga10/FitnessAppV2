@@ -21,7 +21,6 @@ class Header extends Component {
 
     render() {
         const isMenuActive = this.state.menuActive;
-        console.log(isMenuActive);
     return(
         <div className="header-wrapper">
             <div className="title">
