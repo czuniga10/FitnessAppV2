@@ -25,7 +25,8 @@ CREATE TABLE users (
  CREATE TABLE program (
     id SERIAL PRIMARY KEY,
     userID INT REFERENCES users(id),
-    name TEXT
+    name TEXT,
+    description TEXT
  );
 
  CREATE TABLE program_workouts (
@@ -61,13 +62,13 @@ VALUES
     ('Cardio')
 ;
 
-INSERT INTO program ( userID, name )
+INSERT INTO program ( userID, name, description )
 VALUES
-    (1, 'Heavy Day'),
-    (1, 'Light Day'),
-    (2, 'Monday'),
-    (2, 'Wednesday'),
-    (2, 'Friday')
+    (1, 'Heavy Day', 'Awesome Description'),
+    (1, 'Light Day', 'Awesome Description'),
+    (2, 'Monday', 'Awesome Description'),
+    (2, 'Wednesday', 'Awesome Description'),
+    (2, 'Friday', 'Awesome Description')
 ;
 
 INSERT INTO program_workouts ( programID, workoutID, sets, reps )
