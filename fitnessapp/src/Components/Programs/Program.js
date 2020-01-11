@@ -14,7 +14,7 @@ class Programs extends Component {
     }
 
     componentDidMount(){
-        let id = 1;
+        let id = this.props.userInfo.id;
         getUserPrograms(id)
             .then(res => {
                 this.setState({
@@ -32,6 +32,7 @@ class Programs extends Component {
                 index={index}
                 id={program.id}
                 name={program.name}
+                desc={program.description}
             />)
         })
     return(

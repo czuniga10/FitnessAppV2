@@ -12,6 +12,7 @@
     width: 300px;
     height: 200px;
     perspective: 1000px;
+    padding-bottom: 20px;
 }
 
 .card-wrapper-inner {
@@ -21,6 +22,11 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+}
+
+.card-text-back {
+    padding-top: 28%;
+    color: white;
 }
 
 .card-wrapper:hover .card-wrapper-inner {

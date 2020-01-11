@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class ProgramItem extends Component {
     render() {
-        const {id, name } = this.props;
+        const {id, name, desc } = this.props;
     return(
         <div className="card-wrapper">
             <div className="card-wrapper-inner">
@@ -10,9 +10,7 @@ class ProgramItem extends Component {
                     <div className="card-text">{name}</div>
                 </div>
                 <div className="card-wrapper-back">
-                    TEST TEST <br/>
-                    TEST <br/>
-                    TEST
+                    <div className="card-text-back">{desc}</div>
                 </div>
             </div>
         </div>

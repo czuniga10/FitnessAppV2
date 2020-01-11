@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { HashRouter, Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -34,11 +34,13 @@ class App extends Component {
       // const {loading} = this.state;
       return (
         // !loading && 
-        <div className="App">
-          <Header/>
-          {/* <Programs/> */}
-          <Workouts />
-        </div>
+        <HashRouter basename='/'>
+          <div className="App">
+            <Header/>
+            <Route exact path='/:id' component={Programs}/>
+            <Route path='/workouts/:id' component={Workouts} />
+          </div>
+        </HashRouter>
       );
     }
   }
