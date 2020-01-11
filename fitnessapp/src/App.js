@@ -37,7 +37,8 @@ class App extends Component {
         <HashRouter basename='/'>
           <div className="App">
             <Header/>
-            <Route exact path='/:id' component={Programs}/>
+            <Route exact path='/' component={Dashboard} />
+            <Route path='/programs/:id' component={Programs}/>
             <Route path='/workouts/:id' component={Workouts} />
           </div>
         </HashRouter>
