@@ -15,9 +15,6 @@ class Dashboard extends Component {
     render() {
     return(
         <div className="dashboard-wrapper">
-            TEST
-            TEST
-            TEST
         </div>
     )}
 }

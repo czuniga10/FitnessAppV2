@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './header.css';
@@ -40,7 +41,13 @@ class Header extends Component {
                     </div>
                 </button>
             </div>
-            <div className={`${isMenuActive ? "drop-menu-wrapper" : ""}`}></div>
+            <div className={`${isMenuActive ? "drop-menu-wrapper" : ""}`}>
+                <div className={`${isMenuActive ? "drop-menu" : ""}`}>
+                    <div className={`${isMenuActive ? "drop-menu-item" : "drop-menu-item-off"}`}>Dashboard</div>
+                    <div className={`${isMenuActive ? "drop-menu-item" : "drop-menu-item-off"}`}>Projects</div>
+                    <div className={`${isMenuActive ? "drop-menu-item" : "drop-menu-item-off"}`}>About</div>
+                </div>
+            </div>
         </div>
     )}
 }
