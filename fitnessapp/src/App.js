@@ -9,6 +9,7 @@ import { updateUser } from './Actions/actionCreators';
 import Programs from './Components/Programs/Program';
 import Header from './Components/Header/header';
 import Workouts from './Components/Workouts/Workouts';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 //temporary, used for testing, when user logs in, user info will be provided by user/authO
 class App extends Component {

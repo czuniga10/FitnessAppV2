@@ -12,7 +12,7 @@ class Header extends Component {
         }
         this.handleMenu = this.handleMenu.bind(this);
     }
-
+ 
     handleMenu() {
         this.setState({
             menuActive: !this.state.menuActive
@@ -40,9 +40,7 @@ class Header extends Component {
                     </div>
                 </button>
             </div>
-            <div className="menu-wrapper">
-                
-            </div>
+            <div className={`${isMenuActive ? "drop-menu-wrapper" : ""}`}></div>
         </div>
     )}
 }
