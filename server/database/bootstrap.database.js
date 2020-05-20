@@ -8,7 +8,7 @@ massive(connectionString)
     .then( dbInstance => {
         db = dbInstance;
         messageString = 'Connection to the database was successful.'
-        return dbInstance.init();
+        return db.init();
     })
     .catch( err => {
         throw err

@@ -9,5 +9,5 @@ delegateRoutes(app);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
-    console.log(`\n===================================\n Server is listening on port ${port}. \n===================================\n`);
+    console.log(`\n===================================\nServer is listening on port ${port}.\n===================================\n`);
 })
